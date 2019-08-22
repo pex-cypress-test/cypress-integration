@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run --record --key 673ee315-237a-4cec-82e0-4b8adf291b37"
+    "start": "serve -s build -p 3030",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --record --key 673ee315-237a-4cec-82e0-4b8adf291b37",
+    "test": "start-server-and-test start http://localhost:3030 cy:run"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^3.4.1"
+    "cypress": "^3.4.1",
+    "serve": "^11.1.0",
+    "start-server-and-test": "^1.10.0"
   }
 }

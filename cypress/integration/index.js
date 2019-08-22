@@ -1,10 +1,6 @@
 describe('Pex', () => {
   it('works', () => {
     cy.visit('/')
-
-    cy.get('.heading').should(
-      'contain',
-      'The global video & music search engine'
-    )
+    cy.get('body').should('contain', 'Pex Cypress test')
   })
 })
